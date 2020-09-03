@@ -1,0 +1,313 @@
+/**************
+*
+*  TEACHME CSS
+*
+*****************/
+
+
+
+@import "https://fonts.googleapis.com/css?family=Archivo";
+body {
+    font-family: 'Archivo', sans-serif;
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+#search-btn {
+    border: solid .1rem;
+    
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: brown;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: brown;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #fafafa;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: brown;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: brown;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: brown;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.article,
+a.article:hover {
+    background: #fafafa !important;
+    color: brown !important;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: calc(100% - 250px);
+    padding: 40px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#content.active {
+    width: 100%;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 250px);
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+
+
+/* ---------------------------------------------------
+    IDs for Colors and Such
+----------------------------------------------------- */
+
+h1 {
+    color: brown;
+}
+
+h3 {
+    color: brown;
+}
+  
+ /* div::after {  */
+ 
+ .book-img::after {
+    content: "";
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw6yZaevU_WxfK2JjSwIp5vBQivHndR25XhUOG0dp3Dcj99CR_);
+    /* opacity: 0.4; */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+
+#mainpage{
+    align-content: center;
+    text-align: center;
+}
+
+#regPage{
+    /* background-color: #ede0dc; */
+    text-align: justify;
+    align-content: space-around;
+}
+
+#loginPage{
+    text-align: center;
+}
+
+#signButton{
+    border-radius: 25px;
+    background-color: brown;
+    width: 120px;
+    border-color: darkgoldenrod;
+    border-width: 1.5pt;
+}
+
+#regButton{
+    background-color: brown;
+    border-color: darkgoldenrod;
+    border-width: 1.5pt;
+}
+
+#student {
+    padding: 5px;
+    border-radius: 8px;
+    margin: 2px 5px;
+    transition-duration: 0.5s;
+    background-color: #03322a;
+  }
+  #student:hover {
+    background: rgb(0, 0, 0);
+    box-shadow: 0px 4px 8px rgba(5, 5, 5, 0.6);
+  }
+
+
+#teacher {
+    padding: 5px;
+    border-radius: 8px;
+    margin: 2px 5px;
+    transition-duration: 0.5s;
+    background-color: #03322a;
+  }
+  #teacher:hover {
+    background: rgb(0, 0, 0);
+    box-shadow: 0px 4px 8px rgba(5, 5, 5, 0.6);
+  }
+
+  #first_name{
+    position: relative;
+    padding: 1px;
+    border: 1px solid #888;
+    border-radius: 25px;
+  }
+
+  #last_name{
+    position: relative;
+    padding: 1px;
+    border: 1px solid #888;
+    border-radius: 25px;
+  }
+
+  #email{
+    position: relative;
+    padding: 1px;
+    border: 1px solid #888;
+    border-radius: 25px;
+  }
+
+  #pass{
+    position: relative;
+    padding: 1px;
+    border: 1px solid #888;
+    border-radius: 25px;
+  }
+
+  #pass2{
+    position: relative;
+    padding: 1px;
+    border: 1px solid #888;
+    border-radius: 25px;
+  }
+
+  #dob{
+    position: relative;
+    padding: 1px;
+    border: 1px solid #888;
+    border-radius: 25px;
+  }
+
