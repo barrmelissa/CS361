@@ -1,0 +1,117 @@
+
+
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h2>TeachMe</h2>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>{{fname}} {{lname}}</p>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-home"></i>
+                        Menu
+                    </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="http://flip2.engr.oregonstate.edu:4455/user_home?id={{id}}"><i class="fas fa-align-justify"></i> Profile</a>
+                        </li>
+                        <li>
+                            <a href="http://flip2.engr.oregonstate.edu:4455/class?id={{id}}"><i class="fas fa-chalkboard-teacher"></i> Enrollments </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="far fa-envelope"></i> Inbox </a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="http://flip2.engr.oregonstate.edu:4455/calendar?id={{id}}"><i class="fas fa-graduation-cap"></i> Calendar</a>
+                </li>
+                <li>
+                    <a href="#">Contact TeachMe</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- Navbar (top, searchbar)  --> 
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            
+                            <form class="form-inline my-2 my-lg-0" action="../frontend/mockup_search.html">
+                              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                              <button class="btn my-2 my-sm-0" id="search-btn" type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Page Content -->
+
+            <div class="jumbotron">
+              <h1 class="display-4">Enrollments</h1>
+              <p class="lead">Browse your current courses.</p>
+              <hr class="my-4">
+              {{#if new}}
+              <h3 class="display-4">You are now enrolled in {{cname}}!</h3>
+              {{/if}}
+              {{#if error}}
+              <h3 class="display-4">Error Enrolling In {{cname}}! Please Try Again!</h3>
+              {{/if}}
+              {{#unless dataList}}
+               <h3 class="display-4">No Current Enrollments</h3>
+              {{/unless}}
+            </div>
+            
+            <div class="line"></div>
+            
+                {{#if dataList}}
+                <div class="card-deck">
+                  {{#each dataList}}
+                  <div class="card">
+                    <img class="card-img-top" src={{this.main_image}} alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">{{this.name}}</h5>
+                      <a class="btn btn-sm btn-success" href={{this.class_page}}?id={{../id}}>Class Page</a>
+                      <p class="card-text">{{this.description}}</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                  {{/each}}
+                  {{/if}}
+
+              
+            
+                  </div>
+                </div>
+            
+            
+            
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+

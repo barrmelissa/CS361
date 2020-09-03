@@ -1,0 +1,62 @@
+
+<div class="jumbotron jumbotron-fluid book-img" id="regPage">
+  <h1 class="display-4"> Registration Page</h1>
+  
+  <form> <!--needs method and actions=" " for the submit button to send info to backend-->
+      <p class="lead">Type of User:</p>
+
+      <div>
+        <input type="checkbox" id="student" name="student">
+        <label for="student" class="lead">Student</label>
+        <input type="checkbox" id="teacher" name="teacher">
+        <label for="teacher" class="lead">Teacher</label>
+      </div>
+      <div>
+      <label for="name" class="lead" id="first_name1"> First Name:</label>
+      <input type="text" id="first_name" name="first_name" required minlength="1" maxlength="24" size="10" required>
+      </div>
+      <div>
+      <label for="name" class="lead" >Last Name:</label>
+      <input type="text" id="last_name" name="last_name" required minlength="1" maxlength="36" size="10" required>
+      </div>
+      <div>
+      <label for="dob" class="lead">Date of Birth:</label>
+      <input type="date" name="dob" id ="dob" required minlength="1" maxlength="36" size="10" required>
+      </div>
+      <label for="email" class="lead">Email:</label> <!--This input type validates, requires an @ with chars before and after -->
+      <input type="email" id="email" size="30" required>
+      
+      <div>
+          <label for="pass" class="lead">Password (8 characters minimum):</label>
+          <input type="password" id="pass" name="password" minlength="8" required>
+      </div>
+      <div>
+          <label for="pass" class="lead">Re-Enter Password:</label>
+          <input type="password" id="pass2" name="password" minlength="8" required>
+      </div>
+      
+      <label for="bio" class="lead">Bio:</label>
+      <textarea name="bio" id="bio" cols="40" rows="2"></textarea>
+      
+      <label for="highest_education" class="lead">Highest Education:</label>
+      <select id="highest_education" name="highest_education" required>
+          <option value="es">Elementary School</option>
+          <option value="ms">Middle School</option>
+          <option value="hs">High School</option>
+          <option value="sc">Some College</option>
+          <option value="ba">Bachelor's Degree</option>
+          <option value="ma">Master's Degree</option>
+          <option value="pr">Doctorate or Professional</option>
+      </select>
+      <b></b>
+      <div>
+      <label for="avatar" class="lead">Upload a profile picture:</label>
+      <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+      </div>
+      
+      <button type="submit" id="registerButton" class="lead" >Register</button>
+  </form>
+</div><!-- our container -->
+<script src="scripts/nu_script.js"></script>
+
+    
