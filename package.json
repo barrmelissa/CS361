@@ -1,0 +1,25 @@
+/*Team project
+CS 361-400-F18
+TeachMe Project
+11/26/18
+*/
+
+{
+  "name": "teachme_project",
+  "version": "1.0.0",
+  "description": "Interactive Learning Website",
+  "main": "tm_db.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Melissa Barr, Jeremy Lay, Andre Lee, Merry Purser, Jason Silber",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.2",
+    "express-handlebars": "^2.0.1",
+    "express-session": "^1.11.3",
+    "forever": "^0.15.3",
+    "mysql": "^2.8.0"
+  }
+}
